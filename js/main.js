@@ -20,8 +20,8 @@ var objpeople = [
 // login function
 function login(){
     // input from the form
-    var username = document.getElementById("username").Value
-    var password = document.getElementById("password").Value
+    var username = document.getElementById("username").value
+    var password = document.getElementById("password").value
     // loop through the obj
     for (i = 0 ; i < objpeople.length; i++){
         if (username == objpeople[i].username && password == objpeople[i].password){
@@ -33,12 +33,17 @@ function login(){
 console.log("incorrect username or password")
 }
 function registerUser(){
-    var registerUser = document.getElementById("newUser").Value
-    var registerPassword = document.getElementById("newPassword").Value
+    var registerUser = document.getElementById("newUser").value
+    var registerPassword = document.getElementById("newPassword").value
     var newUser ={
         username:registerUser,
         password:registerPassword
     }
+    // for (i = 0; i < objpeople.length; i++){
+    //     if (registerUser == objpeople.username) {
+    //         alert ("that username is already in use, please choose another")
+    //         return
+        // } 
+    }
     objpeople.push(newUser)
     console.log(objpeople)
-}
